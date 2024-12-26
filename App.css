@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #1a1a1a; /* Dark background */
+  --secondary-color: #e50914; /* Netflix Red */
+  --accent-color: #ffcc00; /* Golden Yellow */
+  --text-color: #ffffff; /* White */
+  --card-background: #2a2a2a; /* Darker card background */
+  --border-color: #444; /* Dark Gray */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  margin-bottom: 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  width: calc(50% - 22px);
+  max-width: 300px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 10px var(--secondary-color);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -10px;
+}
+
+.movie-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 100px;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.movie-details {
+  text-align: left;
+}
+
+.movie-details h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: var(--accent-color);
+}
+
+.movie-details p {
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.rating {
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--text-color);
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-movie-form input,
+.add-movie-form button {
+  margin: 5px 0;
+}
+.movie-card img:hover { transform: scale(1.05); box-shadow: 0 4px 8px rgba(255, 204, 0, 0.5); }
